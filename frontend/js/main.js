@@ -1,8 +1,8 @@
 var handler = {
 	
 	imageDictionary: {
-		0:"img/candleon.gif", 		
-		1:"img/candleoff.gif", 
+		0:"img/candleoff.gif", 		
+		1:"img/candleon.gif", 
 		2:"img/candleoff.gif"
 	},
 	
@@ -13,14 +13,14 @@ var handler = {
 		var tiltX =  Math.round(event.beta/90 % 2); //Math.abs( Math.round( event.beta / 90 + 1) * 2 )
 		var tiltY =  Math.round( event.gamma / 180 + 1) * 2;
 		$('#message').html(this.imageDictionary[tiltX]);
-		$('#candle-img').attr('src',this.imageDictionary[tiltX]);
+		$('#candle-img').attr('src',this.imageDictionary[0]);
 		$('#message').html(tiltX+' '+tiltY)
 	}
 };
 
 
 (function() {
-
+	
 if (window.DeviceOrientationEvent) {
     window.addEventListener("deviceorientation", function () {
 		handler.processEvent(event);
