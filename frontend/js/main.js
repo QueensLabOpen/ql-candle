@@ -3,7 +3,7 @@ var handler = {
 	imageDictionary: {
 		0:"img/candleoff.gif", 		
 		1:"img/candleoff.gif", 
-		2:"img/candle-anim.gif",
+		2:"img/candleoff.gif",
 		3:"img/candle-anim.gif",
 		4:"img/candle-anim.gif"
 	},
