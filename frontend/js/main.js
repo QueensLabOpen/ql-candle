@@ -1,26 +1,39 @@
+var currentXState = 0;
 var handler = {
 	
 	onOffDictionary: {
-		0:"img/transparent_candle/ljus_3_00000.png", 		
+		0:"img/transparent_candle/ljus_0.png", 		
 		1:"img/transparent_candle/candle_off.png", 
 		2:"img/transparent_candle/candle_off.png",
-		3:"img/transparent_candle/ljus_3_00000.png",
+		3:"img/transparent_candle/ljus_0.png",
 		4:"img/transparent_candle/candle_off.png"
 	},
 	
 	processEvent: function (event) {
-		var tiltX =  Math.round( event.beta / 90 ) + 2; 
-		var tiltY =  Math.round( event.gamma );
-		$('#candle-img').attr('src', this.onOffDictionary[tiltX]);
+		var tiltX =  Math.round( event.beta / 90 ) + 2;
+		if(tiltX == currentXState) return;
+			postAngle(tiltX);
+
+		//var tiltY =  Math.round( event.gamma );
+		// $('#candle-img').attr('src', this.onOffDictionary[tiltX]);
 
 
-		if(tiltX === 0 || tiltX == 3) {
-			for (i = 0; i < 143; i++) { 
-					$('#candle-img').attr('src', this.onOffDictionary[0].replace("0.png",i+".png"));
-			}			
-		}
+		// if(tiltX === 2	 || tiltX == 3) {
 
-		$('#message').html('TiltX: '+tiltX+' TiltY: '+tiltY+' Image: '+this.onOffDictionary[tiltX]);
+		// 		for (i = 0; i < 142; i++) { 
+		// 		{
+		// 			$('#candle-img').attr('src',  "img/transparent_candle/ljus_0.png".replace("0",i));
+		// 			setTimeout(function(){}, 20);
+		// 		}	
+		// 	}
+
+		//}
+
+		$('#message').html('TiltX: '+tiltX+' Image: '+this.onOffDictionary[tiltX]);
+	},
+	
+	changeImage(xstate) {
+		$('#candle-img').attr('src', this.onOffDictionary[xstate]);	
 	}
 };
 

@@ -1,32 +1,14 @@
 <!doctype html>
-<html lang="sv">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>V6 -Cheezy Christmas Decoration - Ho ho ho</title>
-        <meta name="description" content="">
-		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0">		
-        <link rel="manifest" href="site.webmanifest">
-        <link rel="apple-touch-icon" href="icon.png">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/main.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<style>
-		html, body {
-			height: 100%;
-			margin: 0;
-			overflow: hidden;
-		}
-		body {
-			background: #a90329;
-			background: -moz-radial-gradient(center, ellipse cover, #a90329 0%, #8f0222 44%, #6d0019 100%);
-			background: -webkit-radial-gradient(center, ellipse cover, #a90329 0%,#8f0222 44%,#6d0019 100%);
-			background: radial-gradient(ellipse at center, #a90329 0%,#8f0222 44%,#6d0019 100%);
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=1 );
-			color: #fff;
-		}
-		</style>
+<html lang="en">
+  <head>
+    <title>Hello, world!</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  </head>
   <style type="text/css">
     .form-style-4{
         width: 450px;
@@ -101,42 +83,40 @@
     background: #394D61;
     }
     </style>
-    </head>
-    <body>
-		<section id="candle-section" style="display: none;">
-			<div id="message"></div>
-			<div style="position: absolute; left: 50%; bottom: 0; margin:0;">
-				<div style="position: relative; left: -50%; margin:0;">
-					<img id="candle-img" src="img/transparent_candle/candle_off.png" alt="Candle" style="width: 100%; height: 100%;">
-				</div>
-			</div>
-		</section>
-		<section id="register-section">
-			<div class="form-style-4" action="" method="post">
-					<label for="field1">
-					<span>Group Name</span><input type="text" id="groupId"  value="" required="true" />
-					</label>
-					<label for="field2">
-					<span>User Name</span> <input type="text" id="userName"  value="" required="true" />
-					</label>
-					
-					<label for="field4">
-					<span>Select position</span>
-					</label>
-					<br>
-					<!-- <input type="radio" name="position" value="1"> User1<br>
-					<input type="radio" name="position" value="2" checked>User2<br>
-					<input type="radio" name="position" value="3" checked>User3<br>
-					<input type="radio" name="position" value="4" checked>User4<br>
-					<br> -->
-					<button onclick="submit()" id="btnJoin" >Join</button>
-					</label>
-			</div>
-		</section>
+  <body>
+    <div class="form-style-4" action="" method="post">
+        <label for="field1">
+        <span>Group Name</span><input type="text" id="groupId"  value="" required="true" />
+        </label>
+        <label for="field2">
+        <span>User Name</span> <input type="text" id="userName"  value="" required="true" />
+        </label>
+        
+        <label for="field4">
+        <span>Select position</span>
+        </label>
+        <br>
+        <input type="radio" name="position" value="1"> User1<br>
+        <input type="radio" name="position" value="2" checked>User2<br>
+        <input type="radio" name="position" value="3" checked>User3<br>
+        <input type="radio" name="position" value="4" checked>User4<br>
+        <br>
+        <button onclick="submit()" id="btnJoin" >Join</button>
+        </label>
+      </div>
+
+      <span class="btn btn-default" onclick="postAngle(9)">Testa angle</span>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
     <script>
+
+
       var config = {
         apiKey: "AIzaSyCysm3kfDnqt6bLAOXhTd7hfZZ-kA6fyAI",
         authDomain: "ql-candle-db.firebaseapp.com",
@@ -200,33 +180,28 @@
       function startListen() {
         groupRef.on('value', function(snapshot) {
           onUpdate(snapshot.val());
-		});
-		
-		$("#candle-section").show();
-		$("#register-section").hide();
+        });
       }
 
       function onUpdate(data) {
-		console.log(data);
-		handler.changeImage(data.xstate);
+        console.log(data);
       }
 
       // TODO: call this upon angle change (gyroscope or something like that)
-      function postAngle(state) {
+      function postAngle(angle) {
         let updates = {};
-        updates['/groups/' + groupId + '/xstate'] = state;
+        updates['/groups/' + groupId + '/' + userName + '/angle'] = angle;
         return firebase.database().ref().update(updates);
       }
 
       function submit(id) {
         groupId = document.getElementById('groupId').value;
         userName = document.getElementById('userName').value;
-        position = 1;//document.querySelector('input[name="position"]:checked').value;
+        position = document.querySelector('input[name="position"]:checked').value;
 
         init(groupId, userName, position);
       }
 
-	</script>
-	<script src="js/main.js"></script>
-    </body>
+    </script>
+  </body>
 </html>
