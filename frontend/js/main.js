@@ -3,19 +3,19 @@ var handler = {
 	imageDictionary: {
 		0:"img/candleoff.gif", 		
 		1:"img/candleoff.gif", 
-		2:"img/candleoff.gif",
-		3:"img/candle-anim.gif",
-		4:"img/candle-anim.gif"
+		2:"img/candle-anim.gif",
+		3:"img/candleoff.gif",
+		4:"img/candleoff.gif"
 	},
 	
 	processEvent: function (event) {
 		console.log(event);
 		console.log(this.imageDictionary[2]);
 		var tiltX =  Math.round( event.beta / 90 ) + 2; 
-		$('#candle-img').attr('src',this.imageDictionary[tiltX]);
 		//var tiltY =  Math.round( event.gamma );
-		//$('#message').html(this.imageDictionary[tiltX])
-		//$('#message').html(tiltX+' '+tiltY)
+		$('#message').html(this.imageDictionary[tiltX]);
+		$('#candle-img').attr('src',this.imageDictionary[tiltX]);
+		$('#message').html(tiltX+' '+tiltY)
 	}
 };
 
