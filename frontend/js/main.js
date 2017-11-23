@@ -16,7 +16,6 @@ var handler = {
 
 		if(tiltX === 0 || tiltX == 3) {
 			for (i = 0; i < 143; i++) { 
-					text += cars[i] + "<br>";
 					$('#candle-img').attr('src', this.onOffDictionary[0].replace("0.png",i+".png"));
 			}			
 		}
