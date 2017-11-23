@@ -14,7 +14,7 @@ var handler = {
 		var tiltX =  Math.round( event.beta ) + 1;
 		var tiltXPlusStuff = Math.round(tiltX/90 % 2);
 		//var tiltY =  Math.round( event.gamma );
-		$('#message').html('TiltX: '+ tiltXtiltXPlusStuff + ' Plus: '+ tiltXPlusStuff);
+		$('#message').html('TiltX: '+ tiltXPlusStuff + ' Plus: '+ tiltXPlusStuff);
 		$('#candle-img').attr('src',this.imageDictionary[ tiltXPlusStuff ]);
 		//$('#message').html(tiltX+' '+tiltY)
 	}
