@@ -3,17 +3,17 @@ var handler = {
 	imageDictionary: {
 		0:"img/candleoff.gif", 		
 		1:"img/candleon.gif", 
-		2:"img/candleoff.gif"
+		2:"img/candleon.gif"
 	},
 	
 	processEvent: function (event) {
 		console.log(event);
 		console.log(this.imageDictionary[2]);
 		//$('#message').html(event.alpha+' '+event.beta+' '+event.gamma)
-		var tiltX =  Math.round(event.beta/90 % 2); //Math.abs( Math.round( event.beta / 90 + 1) * 2 )
-		var tiltY =  Math.round( event.gamma / 180 + 1) * 2;
+		var tiltX =  Math.round( event.beta / 90i );
+		var tiltY =  Math.round( event.gamma / 180 );
 		$('#message').html(this.imageDictionary[tiltX]);
-		$('#candle-img').attr('src',this.imageDictionary[0]);
+		$('#candle-img').attr('src',this.imageDictionary[tiltX % 2]);
 		$('#message').html(tiltX+' '+tiltY)
 	}
 };
