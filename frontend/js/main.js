@@ -9,8 +9,6 @@ var handler = {
 	},
 	
 	processEvent: function (event) {
-		console.log(event);
-		console.log(this.imageDictionary[2]);
 		var tiltX =  Math.round( event.beta / 90 ) + 2; 
 		var tiltY =  Math.round( event.gamma );
 		//$('#message').html(this.imageDictionary[tiltX]);
