@@ -3,8 +3,8 @@ var handler = {
 	imageDictionary: {
 		0:"img/candleoff.gif", 		
 		1:"img/candleon.gif", 
-		2:"img/candleanim.gif",
-		3:"img/candleanim.gif"
+		2:"img/candle-anim.gif",
+		3:"img/candle-anim.gif"
 	},
 	
 	processEvent: function (event) {
