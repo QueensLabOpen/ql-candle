@@ -1,10 +1,10 @@
 var handler = {
 	
-	imageDictionary: {
-		0:"img/candleoff.gif", 		
+	onOffDictionary: {
+		0:"img/transparent_candle/ljus_3_00000.png", 		
 		1:"img/candleoff.gif", 
 		2:"img/candleoff.gif",
-		3:"img/candle-anim.gif",
+		0:"img/transparent_candle/ljus_3_00000.png",
 		4:"img/candleoff.gif"
 	},
 	
@@ -14,8 +14,12 @@ var handler = {
 		var tiltX =  Math.round( event.beta / 90 ) + 2; 
 		var tiltY =  Math.round( event.gamma );
 		//$('#message').html(this.imageDictionary[tiltX]);
-		$('#candle-img').attr('src',this.imageDictionary[tiltX]);
-		$('#message').html('TiltX: '+tiltX+' TiltY: '+tiltY+' Image: '+this.imageDictionary[tiltX])
+		$('#candle-img').attr('src', this.onOffDictionary[tiltX]);
+
+
+
+
+		$('#message').html('TiltX: '+tiltX+' TiltY: '+tiltY+' Image: '+this.onOffDictionary[tiltX]);
 	}
 };
 
