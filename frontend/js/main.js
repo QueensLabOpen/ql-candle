@@ -3,9 +3,9 @@ var handler = {
 	onOffDictionary: {
 		0:"img/transparent_candle/ljus_3_00000.png", 		
 		1:"img/candleoff.gif", 
-		2:"img/candleoff.gif",
+		2:"img/transparent_candle/ljus_3_00000.png",
 		0:"img/transparent_candle/ljus_3_00000.png",
-		4:"img/candleoff.gif"
+		4:"img/transparent_candle/ljus_3_00000.png"
 	},
 	
 	processEvent: function (event) {
