@@ -2,16 +2,15 @@ var handler = {
 	
 	onOffDictionary: {
 		0:"img/transparent_candle/ljus_3_00000.png", 		
-		1:"img/candleoff.gif", 
-		2:"img/candleoff.gif",
-		0:"img/transparent_candle/ljus_3_00000.png",
-		4:"img/transparent_candle/ljus_3_00000.png"
+		1:"img/transparent_candle/candle_off.png", 
+		2:"img/transparent_candle/candle_off.png",
+		3:"img/transparent_candle/ljus_3_00000.png",
+		4:"img/transparent_candle/candle_off.png"
 	},
 	
 	processEvent: function (event) {
 		var tiltX =  Math.round( event.beta / 90 ) + 2; 
 		var tiltY =  Math.round( event.gamma );
-		//$('#message').html(this.imageDictionary[tiltX]);
 		$('#candle-img').attr('src', this.onOffDictionary[tiltX]);
 
 
